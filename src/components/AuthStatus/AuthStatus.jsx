@@ -1,5 +1,5 @@
 import { Button } from '../Button/Button'
-import { useNavigate, Navigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthProvider'
 
 export function AuthStatus() {
