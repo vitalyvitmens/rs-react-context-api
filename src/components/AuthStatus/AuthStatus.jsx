@@ -1,6 +1,7 @@
 import { Button } from '../Button/Button'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthProvider'
+import styles from './AuthStatus.module.css'
 
 export function AuthStatus() {
 	const navigate = useNavigate()
@@ -14,28 +15,16 @@ export function AuthStatus() {
 
 	if (auth.user === null) {
 		return (
-			<div style={{ display: 'flex' }}>
-				<div
-					style={{
-						display: 'flex',
-						margin: 'auto',
-						color: 'red',
-						fontSize: '1.25rem',
-						fontWeight: 'bold',
-					}}
-				>
-					Вы не авторизованы!
-				</div>
+			<div className={styles.authStatus}>
+				Вы не авторизованы!
 				<Button onClick={() => navigate('/login')}>Авторизоваться</Button>
 			</div>
 		)
 	}
 
 	return (
-		<div style={{ display: 'flex' }}>
-			<div style={{ margin: 'auto', fontSize: '1.25rem' }}>
-				Добро пожаловать <span style={{ fontWeight: 'bold' }}>{auth.user}</span>{' '}
-			</div>
+		<div className={styles.authStatus}>
+			Добро пожаловать <span style={{ fontWeight: 'bold' }}>{auth.user}</span>
 			<Button onClick={handleSignout}>Выйти</Button>
 		</div>
 	)
