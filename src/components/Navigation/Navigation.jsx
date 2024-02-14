@@ -1,3 +1,4 @@
+import { AuthStatus } from '../AuthStatus/AuthStatus'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.jpg'
 import styles from './Navigation.module.css'
@@ -14,6 +15,7 @@ export const Navigation = () => {
 					style={{ borderRadius: '50%' }}
 				/>
 			</Link>
+      <div className={styles.authCenter}><AuthStatus /></div>
 			<div className={styles.center}>
 				<Link to="/characters">Герои</Link>
 				<Link to="/locations">Локации</Link>
