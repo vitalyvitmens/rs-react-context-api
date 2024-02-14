@@ -15,7 +15,7 @@ export const Navigation = () => {
 					style={{ borderRadius: '50%' }}
 				/>
 			</Link>
-      <AuthStatus />
+      <div className={styles.authCenter}><AuthStatus /></div>
 			<div className={styles.center}>
 				<Link to="/characters">Герои</Link>
 				<Link to="/locations">Локации</Link>
