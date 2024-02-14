@@ -1,5 +1,5 @@
 import { useAuth } from '../../context/AuthProvider'
-import { Button } from '../../components'
+import { Button, CustomInput } from '../../components'
 import { useNavigate, useLocation } from 'react-router-dom'
 import styles from './Login.module.css'
 
@@ -25,9 +25,16 @@ export const Login = () => {
 	return (
 		<div className={styles.Login}>
 			<form onSubmit={handleSubmit}>
-				<label>
-					Username: <input type="text" name="username" />
-				</label>
+				<CustomInput
+					label={'USERNAME'}
+					type="text"
+					id="text"
+					name="username"
+          autoComplete="name"
+					placeholder={'Ваше имя'}
+					radius={5}
+					size={20}
+				/>
 				<Button type="submit">Login</Button>
 			</form>
 		</div>
