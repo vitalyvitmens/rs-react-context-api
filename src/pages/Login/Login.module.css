@@ -1,14 +1,15 @@
 .Login {
+	display: flex;
 	background-color: rgba(234, 223, 249, 0.5);
 	padding: 10px 10px 50px 10px;
 	width: 600px;
-  height: fit-content;
+	height: fit-content;
 	border-radius: 10px;
 	box-shadow: -4px -2px 10px black;
 }
 
 .Login h1 {
-  margin-top: 70px;
+	margin-top: 70px;
 	color: rgb(215, 2, 2);
 	font-family: 'Baloo Bhai', cursive;
 	font-size: 36px;
@@ -44,4 +45,14 @@
 
 .center:hover {
 	opacity: 0.8;
+}
+
+.Login form {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	margin: auto;
+	justify-content: center;
+	text-align: center;
+  padding-top: 1.5rem;
 }
